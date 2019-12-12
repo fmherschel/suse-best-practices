@@ -1402,7 +1402,7 @@ _crm-saphana.txt_, and load it with the command:
 |PREFER_SITE_TAKEOVER |Defines whether RA should prefere to takeover to
 the seconadry instance instead of restarting the failed primary locally.
 
-|AUTOMATED_REGISTER a|
+|AUTOMATED_REGISTER |
 Defines whether a former primary should be automatically registered to
 be secondary of the new primary. With this parameter you can adapt the
 level of system replication automation.
@@ -1716,7 +1716,7 @@ recovery procedure.
                --name={sapsite2}
 ----
 +
-.  Restart the HANA database (now secondary) on node 1 as root.
+.  Restart the HANA database (now secondary) on node 2 as root.
 +
 [subs="attributes,quotes"]
 ----
