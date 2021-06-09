@@ -1183,24 +1183,6 @@ dbpwd="<yourPassword>"
 dbinst="<yourInstanceNr>"
 dbport="30013"
 ----
-
-In the same directory (/hana/shared/srHook) you need to install (link) some Python files from the {hana} client software
-to enable the hook to run the database connect and SQL queries. You need the following files: 
-
-* dbapi.py 
-* \\__init__.py 
-* resultrow.py
-
-// TODO PRIO2: formatting init -> __init__
-
-It is recommended to use symlink to have those Python libraries available. Using symlink, the files are always up to date if you update {hana}.
-[subs="specialchars,attributes"]
-----
-# cd /hana/shared/srHook
-# ln -s /hana/shared/{refSid}/exe/linuxx86_64/hdb/python_support/hdbcli/dbapi.py .
-# ln -s /hana/shared/{refSid}/exe/linuxx86_64/hdb/python_support/hdbcli/__init__.py .
-# ln -s /hana/shared/{refSid}/exe/linuxx86_64/hdb/python_support/hdbcli/resultrow.py .
-----
 ========
 
 .Enable use of {haDrCostOptMem}
@@ -1213,9 +1195,6 @@ Enable the use of {haDrCostOptMem} by adpating global.ini on node 2.
 provider = {haDrCostOptMem}
 path = /hana/shared/srHook/
 execution_order = 2
-
-[trace]
-ha_dr_saphanasr = info
 ----
 
 After changing the global.ini on node 2 and implementing the {haDrCostOptMem} hook, you should start
@@ -4240,21 +4219,21 @@ of a takeover.
 
 [subs="specialchars,attributes"]
 ----
-#!/usr/bin/env python2
-
 """
-Sample for a HA/DR hook provider for method srPostTakeover().
-When using your own code in here, please copy this file to location on /hana/shared
-outside the HANA installation.
+HA/DR hook {haDrCostOptMem} for method srPostTakeover()
 
-To configure your own changed version of this file, please add to your global.ini lines similar to this:
+This hook is used when deploying a "Cost Optimized Scenario".
+It makes sure to reconfigure the primary database after a takeover.
 
-[ha_dr_provider_<className>]
-provider = <className>
+The folowing changes to global.ini are needed to activea this hook.
+
+[ha_dr_provider_{haDrCostOptMem}]
+provider = {haDrCostOptMem}
 path = /hana/shared/srHook/
 execution_order = 2
 
 For all hooks, 0 must be returned in case of success.
+
 Set the following variables:
 * dbinst Instance Number [e.g. 00 - 99 ]
 * dbuser Username [ e.g. SYSTEM ]
@@ -4278,7 +4257,8 @@ stmnt2 = "ALTER SYSTEM ALTER CONFIGURATION ('global.ini','SYSTEM') UNSET ('syste
 #
 # loading classes and libraries
 #
-import os, time, dbapi
+import os, time
+from hdbcli import dbapi
 from hdb_ha_dr.client import HADRBase, Helper
 #
 # class definition {haDrCostOptMem}
