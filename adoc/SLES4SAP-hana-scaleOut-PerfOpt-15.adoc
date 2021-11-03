@@ -2634,6 +2634,7 @@ As SAP Notes are changing over time, this list is only a starting point
 * 1890444 - Slow HANA system due to CPU power save mode
 * 1944799 - SAP HANA Guidelines for SLES Operating System Installation
 * 1999993 - How-To: Interpreting SAP HANA Mini Check Results
+* 1999997 - FAQ: SAP HANA Memory
 * 2000000 - FAQ: SAP HANA Performance Optimization
 * 2100040 - FAQ: SAP HANA CPU
 * 2380229 - SAP HANA Platform 2.0 – Central Note
