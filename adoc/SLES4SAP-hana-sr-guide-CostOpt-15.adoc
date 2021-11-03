@@ -4051,6 +4051,8 @@ SAP Product Availability Matrix::
 {launchPadNotes}2380229
 1501701 - Single Computing Unit Performance and Sizing::
 {launchPadNotes}1501701
+1999997 - FAQ: SAP HANA Memory
+{launchPadNotes}1999997
 1944799 - SAP HANA Guidelines for SLES Operating System Installation::
 {launchPadNotes}1944799
 1890444 - Slow HANA system due to CPU power save mode::
