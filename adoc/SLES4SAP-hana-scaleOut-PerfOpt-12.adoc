@@ -2577,6 +2577,7 @@ As SAP Notes are changing over time, this list is only a starting point
 * 2380229 SAP HANA Platform 2.0 – Central Note
 * 2470289 FAQ: SAP HANA Non-Uniform Memory Access (NUMA)
 * 2647673 HANA Installation Failure
+* 1552925 Linux: High Availability Cluster Solutions
 * 3007062 FAQ: SAP HANA & Third Party Cluster Solutions
 
 // Standard SUSE Best Practices includes
