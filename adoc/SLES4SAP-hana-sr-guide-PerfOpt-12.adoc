@@ -2875,8 +2875,8 @@ SAP HANA Administration Guide::
 {launchPadNotes}1275776
 1514967 - SAP HANA: Central Note::
 {launchPadNotes}1514967
-1523337 - SAP In-Memory Database 1.0: Central Note::
-{launchPadNotes}1523337
+// 1523337 - SAP In-Memory Database 1.0: Central Note::
+// {launchPadNotes}1523337
 2380229 - SAP HANA Platform 2.0 - Central Note::
 {launchPadNotes}2380229
 1501701 - Single Computing Unit Performance and Sizing::
