@@ -2897,6 +2897,10 @@ SAP HANA Administration Guide::
 {launchPadNotes}1888072
 1846872 - "No space left on device" error reported from HANA::
 {launchPadNotes}1846872
+1999997 - FAQ: SAP HANA Memory::
+{launchPadNotes}1999997
+3007062 - FAQ: SAP HANA & Third Party Cluster Solutions::
+{launchPadNotes}3007062
 
 [[app.hana-sr.example]]
 == Examples

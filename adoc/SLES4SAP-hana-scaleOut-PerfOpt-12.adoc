@@ -2569,12 +2569,16 @@ As SAP Notes are changing over time, this list is only a starting point
 * 1954788 SAP HANA DB: Recommended OS settings for SLES 11 / SLES for SAP Applications 11 SP3
 * 1984787 SUSE LINUX Enterprise Server 12: Installation notes and
 * 1999993 How-To: Interpreting SAP HANA Mini Check Results
+* 1999997 FAQ: SAP HANA Memory
 * 2000000 FAQ: SAP HANA Performance Optimization
 * 2100040 FAQ: SAP HANA CPU
 * 2205917 SAP HANA DB: Recommended OS settings for SLES 12 / SLES for SAP Applications 12.
+* 2369981 Required configuration steps for authentication with HANA System Replication
 * 2380229 SAP HANA Platform 2.0 – Central Note
 * 2470289 FAQ: SAP HANA Non-Uniform Memory Access (NUMA)
 * 2647673 HANA Installation Failure
+* 1552925 Linux: High Availability Cluster Solutions
+* 3007062 FAQ: SAP HANA & Third Party Cluster Solutions
 
 // Standard SUSE Best Practices includes
 == Legal Notice
