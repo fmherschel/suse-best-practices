@@ -28,6 +28,7 @@ DONE PRIO1: Check all inline TODOs and set priorities
 DONE PRIO1: Fix CRM snip sets to cover scale-Out instead of scale-Up
 DONE PRIO1: Define limitations like one master-name-server per site only (DONE), no cost-optimized scenario (DONE), no multi-tier-setup (DONE) till tested
 DONE PRIO1: Remove no-quorum-policy or check policy != ignore but == freeze
+DONE PRIO1: make sure "no-quorum-policy = suicide"
 DONE PRIO1: "both" nodes -> "all" nodes  or "both" sides/sites
 DONE PRIO1: suseXX scheme (odd: site1, even site2) --> see Variables.txt
 DONE PRIO1: Use and integrate python hook
@@ -1728,7 +1729,7 @@ Enter the following to crm-bs.txt
 
 ----
 property $id="cib-bootstrap-options" \
-            no-quorum-policy="freeze" \
+            no-quorum-policy="suicide" \
             stonith-enabled="true" \
             stonith-action="reboot" \
             stonith-watchdog-timeout="10" \
